@@ -5,12 +5,9 @@ One of the few biometric methods that handles both high accuracy and low intrusi
 
 In that research, the minimization function has not got any regularization term. To test how the regularization terms has an effect on face recognition accuracy, here we reimplemneted mention algorithm and also proposed new regularization term which is in L2 norm.
 
+In used dataset named CroppedYale, has 58 number of images for every single 38 individuals. All face images in that dataset has 192x168 resolution and cropped well manually. We splitted entire dataset into 2 group as first 29 instances are train and last 29 instances are test. Here is some example of dataset.
 
-## L2 Orthonormal Face Recognition
 
-Consider face recognition with **n** number of training face images are collected from **K** number of subjects. Suppose **n_k** refers the number of training images which belongs to $k^{th}$ subject. Assume all training images get just a column vector and all column vector are merged in a single matrix $A$ in eq(1) where $x_n$ refers $n_{th}$ face image which is in single column vector, $m$ refers number of pixel in any image.
-
-$$A= \begin{bmatrix} x_{1} & .. x_{n} \end{bmatrix} \in $R$^{mxn}] $$
 
 ## Reference ##
 [1]	Shi, Qinfeng, et al. "Is face recognition really a compressive sensing problem?." Computer Vision and Pattern Recognition (CVPR), 2011 IEEE Conference on. IEEE, 2011. 
