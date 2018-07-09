@@ -7,6 +7,13 @@ In that research, the minimization function has not got any regularization term.
 
 In used dataset named CroppedYale, has 58 number of images for every single 38 individuals. All face images in that dataset has 192x168 resolution and cropped well manually. We splitted entire dataset into 2 group as first 29 instances are train and last 29 instances are test. Here is some example of dataset.
 
+![Sample image](sampleinput.jpg?raw=true "Title")
+
+Within given code, you can control regularization terms effect by changing the value of `lambda` in main.m script. if you set `lambda=0;` means there is no regularization terms and algorithm works as how mentioned paper described [1]. To run the code briefly run main script by;
+```{Matlab}
+> main
+```
+As you can see, the recognition acuracy is around 95%.
 
 
 ## Reference ##
