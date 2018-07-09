@@ -1,7 +1,7 @@
 
 # Orthonormal Face Recognition
 
-One of the few biometric methods that handles both high accuracy and low intrusiveness is face recognition. Over past 30 years, many different face recognition algorithm was proposed by significant amount of researchers. Compressive Sensing is one of the standard methods of face recognition in holistic approach. However, in research [1], the sparsity assumption which underpins much of this work is not supported by the data was shown. In addition to that, they showed that a simple L2 approach to the face recognition problem is not only significantly more accurate than the state-of-the art approach, it is also more robust, and much faster. The results are demonstrated on the publicly available YaleB and AR face datasets. 
+One of the few biometric methods that handles both high accuracy and low intrusiveness is face recognition. Over past 30 years, many different face recognition algorithm was proposed by significant amount of researchers. Compressive Sensing is one of the standard methods of face recognition in holistic approach. However, in research [1], the sparsity assumption which underpins much of this work is not supported by the data was shown. In addition to that, they showed that a simple L2 approach to the face recognition problem is not only significantly more accurate than the state-of-the art approach, it is also more robust, and much faster. The results are demonstrated on the publicly available YaleB face dataset. 
 
 In that research, the minimization function has not got any regularization term. To test how the regularization terms has an effect on face recognition accuracy, here we reimplemneted mention algorithm and also proposed new regularization term which is in L2 norm.
 
