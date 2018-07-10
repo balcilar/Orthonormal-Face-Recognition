@@ -40,8 +40,8 @@ fprintf('----------------------------------\n Split data into \n train and test 
 per = length(persons);
 num = floor(num_im/2); % use equal size training and testing sets. Not neccessary.
 s = 0;
-order = 1:2*num;
-
+%order = 1:2*num;
+order =[1:2:2*num 2:2:2*num];
 
 X = zeros(height*width,per*num);% training images
 Y = zeros(height*width,per*num);% testing images
