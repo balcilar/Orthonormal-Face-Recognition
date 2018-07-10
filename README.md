@@ -13,9 +13,11 @@ Within given code, you can control regularization terms effect by changing the v
 ```{Matlab}
 > main
 ```
-As you can see, the recognition acuracy is around 99%. Here is the score differences between actual class score and the minimum score of the all rest clases. As you can see if the score is over zero means the predicted class is true, unless the predicted class is wrong. According to our test we took %99.00 with default lambda=0, but it increased to %99.30 using lembda=2500000. Please note that this result depends on how you split your dataset into train and test case. if you select those dataset the result might be sligtly differ.  
+As you can see, the recognition acuracy is around 99%. Here is the score differences between actual class score and the minimum score of the all rest clases. As you can see if the score is over zero means the predicted class is true, unless the predicted class is wrong. 
 
 ![Sample image](result.bmp?raw=true "Title")
+
+According to our test we took %99.00 with default lambda=0, but it increased to %99.30 using lembda=2500000. Please note that this result depends on how you split your dataset into train and test case. if you select those dataset the result might be sligtly differ.  
 
 ## Reference ##
 [1]	Shi, Qinfeng, et al. "Is face recognition really a compressive sensing problem?." Computer Vision and Pattern Recognition (CVPR), 2011 IEEE Conference on. IEEE, 2011. 
