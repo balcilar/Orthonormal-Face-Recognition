@@ -19,7 +19,7 @@ As you can see, the recognition acuracy is around 99%. Here is the score differe
 
 According to our test we took %99.00 accuracy with default `lambda=0`, but it increased to %99.30 using `lambda=2000000`. Please note that this result depends on how you split your dataset into train and test case. if you select different division techniques, the result might sligtly differ.  
 
-Also here is confusion matrix and multi class ROC curves too. Note that we change axis of ROC curve to make it more clear.
+Also here is confusion matrix and multi class ROC curves too. Note that we changed x-axis range of ROC curve, just display [0 0.4] in order to make it more clear.
 
 ![Sample image](confroc.bmp?raw=true "Title")
 
