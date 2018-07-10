@@ -1,9 +1,11 @@
+%% written by Muhammet Balcilar
+
 clear all
 clc
 
 % define lamnda value which shows regularization coef.
 
-lambda=2500000;;
+lambda=2000000;
 
 % read dataset divide %50 of them train and test set
 [Train LabelTrain Test LabelTest]=read_split_dataset('data/CroppedYale/');
