@@ -5,7 +5,7 @@ One of the few biometric methods that handles both high accuracy and low intrusi
 
 In that research, the minimization function has not got any regularization term[1]. To test how the regularization terms has an effect on face recognition accuracy, here we reimplemneted mention algorithm and also proposed new regularization term which is in L2 norm.
 
-In used dataset named CroppedYale, has 58 number of images for every single 38 individuals. All face images in that dataset has 192x168 resolution and cropped well manually. We splitted entire dataset into 2 group as first 29 instances are train and last 29 instances are test. Here is some example of dataset.
+In used dataset named CroppedYale, has 58 number of images for every single 38 individuals. All face images in that dataset has 192x168 resolution and cropped well manually. We splitted entire dataset into 2 group as odd order number of images are in train set and even order number images are in test set. Here is some example of dataset.
 
 ![Sample image](sampleinput.jpg?raw=true "Title")
 
@@ -13,8 +13,9 @@ Within given code, you can control regularization terms effect by changing the v
 ```{Matlab}
 > main
 ```
-As you can see, the recognition acuracy is around 95%.
+As you can see, the recognition acuracy is around 99%. Here is the score differences between actual class score and the minimum score of the all rest clases. As you can see if the score is over zero means the predicted class is true, unless the predicted class is wrong. 
 
+![Sample image](result.bmp?raw=true "Title")
 
 ## Reference ##
 [1]	Shi, Qinfeng, et al. "Is face recognition really a compressive sensing problem?." Computer Vision and Pattern Recognition (CVPR), 2011 IEEE Conference on. IEEE, 2011. 
