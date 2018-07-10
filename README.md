@@ -17,7 +17,7 @@ As you can see, the recognition acuracy is around 99%. Here is the score differe
 
 ![Sample image](result.bmp?raw=true "Title")
 
-According to our test we took %99.00 with default `lambda=0`, but it increased to %99.30 using `lambda=2000000`. Please note that this result depends on how you split your dataset into train and test case. if you select different division techniques, the result might be sligtly differ.  
+According to our test we took %99.00 with default `lambda=0`, but it increased to %99.30 using `lambda=2000000`. Please note that this result depends on how you split your dataset into train and test case. if you select different division techniques, the result might sligtly differ.  
 
 ## Reference ##
 [1]	Shi, Qinfeng, et al. "Is face recognition really a compressive sensing problem?." Computer Vision and Pattern Recognition (CVPR), 2011 IEEE Conference on. IEEE, 2011. 
