@@ -3,7 +3,7 @@ clc
 
 % define lamnda value which shows regularization coef.
 
-lambda=100;
+lambda=2500000;;
 
 % read dataset divide %50 of them train and test set
 [Train LabelTrain Test LabelTest]=read_split_dataset('data/CroppedYale/');
