@@ -21,7 +21,7 @@ According to our test we took %99.00 accuracy with default `lambda=0`, but it in
 
 Also here is confusion matrix and multi class ROC curves too. Note that we change axis of ROC curve to become more clear.
 
-![Sample image](conf.bmp?raw=true "Title")
+![Sample image](confroc.bmp?raw=true "Title")
 
 ## Reference ##
 [1]	Shi, Qinfeng, et al. "Is face recognition really a compressive sensing problem?." Computer Vision and Pattern Recognition (CVPR), 2011 IEEE Conference on. IEEE, 2011. 
