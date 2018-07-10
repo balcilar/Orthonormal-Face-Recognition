@@ -13,7 +13,7 @@ Within given code, you can control regularization terms effect by changing the v
 ```{Matlab}
 > main
 ```
-As you can see, the recognition acuracy is around 99%. Here is the score differences between actual class score and the minimum score of the all rest clases. As you can see if the score is over zero means the predicted class is true, unless the predicted class is wrong. 
+As you can see, the recognition acuracy is around 99%. Here is the score differences between actual class distance and the minimum distance of the all rest classes. As you can see if the score is over zero means the predicted class is true, unless the predicted class is wrong. 
 
 ![Sample image](result.bmp?raw=true "Title")
 
