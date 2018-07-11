@@ -5,6 +5,42 @@ One of the few biometric methods that handles both high accuracy and low intrusi
 
 In that research, the minimization function has not got any regularization term[1]. To test how the regularization terms has an effect on face recognition accuracy, here we reimplemneted mention algorithm and also proposed new regularization term which is in L2 norm.
 
+## L2 Orthonormal Face Recognition without Regularization Term
+
+Consider face recognition with *n* number of training face images are collected from *K* number of subjects. Suppose *nk* refers the number of training images which belongs to *kth* subject. It means, *N=∑_(k=1)^K n_k*  . Assume all training images get just a column vector and all column vector are merged in a single matrix *A* in eq(1) where *x_n* refers *nth* face image which is in single column vector *m* refers number of pixel in any image.
+
+*A=[(x_1 .. x_n )]  ∈ R^(m×n)*           (1)
+
+According to L2 Orthonormal Face Recognition algorithm, we can rewrite *x* test image single column vector with linear combination of train image matrix *A*. Suppose the linear combination is shown by *α*, we can define it with eq(2).
+
+*x=A.α*                                     (2)
+
+Note than *α* depends on given test image *x* and it should be calculated for every single test inputs. So, to figure out the transformation vector *α*, L2 orthonormal algorithm tries to minimize error function which uses L2 norm of error defined in eq (3).
+
+*α_x=argmin┬α⁡〖 ‖A.α-x‖ 〗*     (3)
+
+Using the advantages of L2 norm error minimization, we can reach the explicit optimum solution using least square errors via eq (4).
+*α_x=(A^T A)^(-1) A^T x   *                      (4)
+
+After determination of transformation vector *α_x*, we can use eq (5) to figure out in which training subject group belongs to.
+
+*c^* (x)=argmin┬k⁡〖 ‖A_k.α_x-x‖_(l_2 ) 〗 *           (5)
+
+In above equation, function *c^* (x)* refers the class id of tested *x* image, *k* is id of each class in training set, *A_k* refers all image vector of *kth* image in training set. As you the equations tells, we just briefly need to calculate the sum of squares of differences and find the one which has minimum square error.
+
+## L2 Regularization Terms
+
+In addition to minimization function in eq (3) we added L2 norm of desired vector *α_x* as regularization terms. So the new minimization function becomes as eq (6).
+
+*α_x=argmin┬α⁡〖 ‖A.α-x‖_(l_2 ) 〗+λ‖α‖*         (6)
+
+Thanks to all terms in minimization function are in L2 form, we can easily find an optimum solution using least squares again with using eq (7).
+*α_x=(A^T A+λI)^(-1) A^T x *    (7)               
+
+## Results
+As the given minimization formula tells, classic L2 orthonormal face recognition algorithm in eq (3) tries to find best *α* vector for given *x* test image vector according to reconstruction sum of squares error. It does not pay attention how the found *α* vector is. But L2 regularized version tries to minimize both sum of squares of error but also sum of squares of vector *α*. It means classic algorithm finds more minimum reconstruction error but the *α* vector might be consist of big numbers. But within L2 regularization terms, the sum of square of *α* has *λ* effect on minimization function which means maybe it might found bigger reconstruction error but found *α* has minimum sum of squares on test images. Sum of squares means the vector might consist of negative numbers, it is not problem. But the numbers should be as closed to zero as possible. 
+
+
 In used dataset named CroppedYale, has 58 number of images for every single 38 individuals. All face images in that dataset has 192x168 resolution and cropped well manually. We splitted entire dataset into 2 group as odd order number of images are in train set and even order number images are in test set. Here is some example of dataset.
 
 ![Sample image](sampleinput.jpg?raw=true "Title")
