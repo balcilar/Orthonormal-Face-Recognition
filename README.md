@@ -25,7 +25,7 @@ Using the advantages of L2 norm error minimization, we can reach the explicit op
 
 After determination of transformation vector *α_x*, we can use eq (5) to figure out in which training subject group belongs to.
 
-*c^** (x)=argmin┬k⁡〖 ‖A_k.α_x-x‖ 〗           (5)
+*c** (x)=argmin┬k⁡〖 ‖A_k.α_x-x‖ 〗           (5)
 
 In above equation, function *c^* (x)* refers the class id of tested *x* image, *k* is id of each class in training set, *A_k* refers all image vector of *kth* image in training set. As you the equations tells, we just briefly need to calculate the sum of squares of differences and find the one which has minimum square error.
 
