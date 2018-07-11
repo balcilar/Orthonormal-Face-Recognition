@@ -21,7 +21,7 @@ Note than *α* depends on given test image *x* and it should be calculated for e
 
 Using the advantages of L2 norm error minimization, we can reach the explicit optimum solution using least square errors via eq (4).
 
-*α_x=(A^T A)^(-1) A^T x   *                      (4)
+*α_x=(A^T A)^(-1) A^T x*                      (4)
 
 After determination of transformation vector *α_x*, we can use eq (5) to figure out in which training subject group belongs to.
 
@@ -37,7 +37,7 @@ In addition to minimization function in eq (3) we added L2 norm of desired vecto
 
 Thanks to all terms in minimization function are in L2 form, we can easily find an optimum solution using least squares again with using eq (7).
 
-*α_x=(A^T A+λI)^(-1) A^T x *    (7)  
+*α_x=(A^T A+λI)^(-1) A^T x*    (7)  
 
 
 ## Results
