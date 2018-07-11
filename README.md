@@ -20,6 +20,7 @@ Note than *α* depends on given test image *x* and it should be calculated for e
 *α_x=argmin┬α⁡〖 ‖A.α-x‖ 〗*     (3)
 
 Using the advantages of L2 norm error minimization, we can reach the explicit optimum solution using least square errors via eq (4).
+
 *α_x=(A^T A)^(-1) A^T x   *                      (4)
 
 After determination of transformation vector *α_x*, we can use eq (5) to figure out in which training subject group belongs to.
@@ -36,7 +37,8 @@ In addition to minimization function in eq (3) we added L2 norm of desired vecto
 
 Thanks to all terms in minimization function are in L2 form, we can easily find an optimum solution using least squares again with using eq (7).
 
-*α_x=(A^T A+λI)^(-1) A^T x *    (7)               
+*α_x=(A^T A+λI)^(-1) A^T x *    (7)  
+
 
 ## Results
 As the given minimization formula tells, classic L2 orthonormal face recognition algorithm in eq (3) tries to find best *α* vector for given *x* test image vector according to reconstruction sum of squares error just using eq(4). It does not pay attention how the found *α* vector is. But L2 regularized version tries to minimize both sum of squares of error but also sum of squares of vector *α*. It means classic algorithm finds more minimum reconstruction error but the *α* vector might be consist of big numbers. But within L2 regularization terms, where it tries to minimize eq(6) where its optimum solution is in eq(7), the sum of square of *α* has *λ* effect on minimization function which means maybe it might found bigger reconstruction error but found *α* has minimum sum of squares on test images. Sum of squares means the vector might consist of negative numbers, it is not problem. But the numbers should be as closed to zero as possible. As a result the difeerences between classical L2 ortohormal face recognition algorithm and L2 regularized version is just using either eq(4) or eq(7). As you can see where *λ=0* both formula are identical.  
