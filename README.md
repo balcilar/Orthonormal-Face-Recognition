@@ -9,7 +9,7 @@ In that research, the minimization function has not got any regularization term[
 
 Consider face recognition with *n* number of training face images are collected from *K* number of subjects. Suppose *nk* refers the number of training images which belongs to *kth* subject. It means, *N=∑_(k=1)^K n_k*  . Assume all training images get just a column vector and all column vector are merged in a single matrix *A* in eq(1) where *x_n* refers *nth* face image which is in single column vector *m* refers number of pixel in any image.
 
-*A=[(x_1 .. x_n )]  ∈ R^(m×n)*           (1)
+*A=[(x_1 .. x_n )]  ∈ R^(m×n)*  (1)
 
 According to L2 Orthonormal Face Recognition algorithm, we can rewrite *x* test image single column vector with linear combination of train image matrix *A*. Suppose the linear combination is shown by *α*, we can define it with eq(2).
 
