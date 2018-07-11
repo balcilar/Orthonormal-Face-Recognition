@@ -25,7 +25,7 @@ Using the advantages of L2 norm error minimization, we can reach the explicit op
 
 After determination of transformation vector *α_x*, we can use eq (5) to figure out in which training subject group belongs to.
 
-*c^* (x)=argmin┬k⁡〖 ‖A_k.α_x-x‖_(l_2 ) 〗 *           (5)
+*c^* (x)=argmin┬k⁡〖 ‖A_k.α_x-x‖ 〗 *           (5)
 
 In above equation, function *c^* (x)* refers the class id of tested *x* image, *k* is id of each class in training set, *A_k* refers all image vector of *kth* image in training set. As you the equations tells, we just briefly need to calculate the sum of squares of differences and find the one which has minimum square error.
 
@@ -33,7 +33,7 @@ In above equation, function *c^* (x)* refers the class id of tested *x* image, *
 
 In addition to minimization function in eq (3) we added L2 norm of desired vector *α_x* as regularization terms. So the new minimization function becomes as eq (6).
 
-*α_x=argmin┬α⁡〖 ‖A.α-x‖_(l_2 ) 〗+λ‖α‖*         (6)
+*α_x=argmin┬α⁡〖 ‖A.α-x‖ 〗+λ‖α‖*         (6)
 
 Thanks to all terms in minimization function are in L2 form, we can easily find an optimum solution using least squares again with using eq (7).
 
